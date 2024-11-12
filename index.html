@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html><body><nav class="navbar navbar-light" style="background-color:#337ab7;min-height: 15px !important;margin-bottom: 0px;">
+ <!-- <div class="container">
+    <a class="navbar-brand" href="https://eduskillsfoundation.org/">
+      <img src="https://eduskillsfoundation.org/wp-content/uploads/2019/09/logo.png" alt="" style="max-height:60px"/>
+    </a>
+    <a class="navbar-brand navbar-right" href="#">
+      <img src="https://aicte-india.org/sites/default/files/logo_new.png" alt="" style="max-height:60px"/>
+    </a>
+  </div>-->
+</nav>
+<div><img src="images-aicte1million2.png" alt="AICTE 1 Million" width="100%"></div>
+
+
+
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>AICTE Inernship Certification Management Portal</title>
+
+  <link rel="icon" type="image/png" href="10-icon.png">
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <!-- Bootstrap 3.3.6 -->
+  <link rel="stylesheet" href="css-bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="css-AdminLTE.min.css">
+  <!-- AdminLTE Skins. Choose a skin from the css/skins
+       folder instead of downloading all of them to reduce the load. -->
+  <link rel="stylesheet" href="skins-_all-skins.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.css">
+
+  <link rel="stylesheet" href="css-style.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angular-busy/4.1.4/angular-busy.css" integrity="sha512-sWk/3tdIZOT5Gn+W06CASn6so+Mgym5bryHp3f4QkA/BzmktgjHBMRJoADKMLAFuNIOU9VPjvJONMTH5V+khqA==" crossorigin="anonymous">
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- jQuery 2.2.3 -->
+  <script src="js/jQuery-jquery-2.2.3.min.js"></script>
+  <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip
+  <script>
+    $.widget.bridge('uibutton', $.ui.button);
+  </script>
+-->
+  <!-- Bootstrap 3.3.6 -->
+  <script src="js/js-bootstrap.min.js"></script>
+  <script src="js/1.8.0-angular.js" integrity="sha512-CiKQCmN86Y1I8Ewkt2gGnSNmsiVrS9Ez5MoudCBhTiBJScg+GjA9OlKdaeI0IuxdCl43Fs5x5zpeew2hfOatOA==" crossorigin="anonymous"></script>
+  <script src="js/0.3.11-ngStorage.js" integrity="sha512-c2T3C9cjX/WQscZb+Qws0CqbPujwNik3JPOzn4r/PwHDYdIVxC+LXOY51+4qAsR2wutl7iC0at47X1EIroFq5A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="js/js-papaparse.js"></script>
+  <script src="js/js-papaparse.min.js"></script>
+<script src="js/2.4.3-purify.min.js" integrity="sha512-3dcbndbDLLWfKWevQu8C/1qVRcxx6h+eRDSnn3/pcBZHISRJgsj3u71U/Ad6nQVHrEi05hOSr6Hnb/p0pWc94w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<style>
+
+@media only screen and (max-width: 600px) {
+  .register-box{
+  width:100%;
+  margin: 3% auto;
+}
+}
+
+.register-box-body {
+    background: #337ab7;
+    color: #fff;
+}
+@media only screen and (min-width: 600px) {
+.register-box{
+  width:50%;
+  margin: 3% auto;
+}
+}
+</style>
+
+
+<div class="register-box" ng-app="myApp" ng-controller="certController">
+
+
+  <div class="register-box-body" ng-cloak>
+
+    <div cg-busy="myPromise"></div>
+    <div ng-show="certnotverified" style="color:whitesmoke">
+
+    </div>
+    <div ng-show="certverified" style="color:whitesmoke">
+    <h3 class="login-box-msg"><img src="images-checked.gif" width="30%"><br>AICTE Internship Certificate is successfully verified</h3>
+    <h4>Certificate ID:319309a12cd2e9e5e9ccdae5d6d0b9aa </h4>
+    <h4>Issued On: 22 June 2024</h4>
+    <h4>Issued To:Gaddipati Kartheek</h4>
+    <h4>Institute: Vasireddy Venkatadri Institue of Technology</h4>
+    <h4>Internship: AI-ML Virtual Internship(January-March 2024)</h4>
+    <h4>Grade:C</h4>
+    </div>
+    <div style="border: solid 1px white">
+	<div class="row">
+	<div class="col-md-12">
+		<p>Grade Details</p>
+	</div>
+	</div>
+<div class="row">
+<div class="col-md-6" style="border 1px solid">
+<p>O- Outstanding - 90-100<br>
+E- Excellent : 80-89<br>
+A- Very Good : 70-79<br>
+B- Good : 60-69</p>
+</div>
+<div class="col-md-6" style="border 1px solid">
+<p>C- Fair : 50-59
+	<br>
+D- Avarage : 40-49
+	<br>
+P- Pass : 30-39
+	<br>
+F- Fail : Bellow 30</p>
+	</div>
+	</div>
+  </div>
+  <!-- /.form-box -->
+</div>
+<!-- /.register-box -->
+<script>
+var app = angular.module('myApp', ['datatables', 'ngResource', 'ckeditor', 'datatables.buttons', 'cgBusy']);
+app.controller('certController', function($scope, $http, $resource, DTOptionsBuilder) {
+        $scope.certid=DOMPurify.sanitize("9be3c84c75e205e1258096b5eed40ebc");
+            $scope.myPromise= $http.get('/pages/home/include/getcert.php?certid='+$scope.certid)
+        .then(function(response) {
+            // alert(response.data);
+            if(response.data == "null")
+                {
+                        $scope.certnotverified=true;
+                        $scope.errmsg="Sorry certificate details not found";
+                }
+                else
+                {
+                        errmsg="";
+                        $scope.cert=response.data;
+                        $scope.certverified=true;
+                }
+        })
+
+});
+</script>
+
+  <!-- Slimscroll -->
+<script src="js/slimScroll-jquery.slimscroll.min.js"></script>
+<!-- FastClick -->
+<script src="js/angular-datatable-angular-datatables.min.js"></script>
+<script src="js/2.0.0-ui-bootstrap-tpls.min.js"></script>
+<script src="js/0.1.1-angular-ui-utils.min.js"></script>
+<script type="text/javascript" charset="utf8" src="js/js-jquery.dataTables.js"></script>
+<script src="js/js-dataTables.bootstrap.min.js"></script>
+
+<script src="js/ckeditor-ckeditor.js"></script>
+<script src="js/master-angular-ckeditor.js"></script>
+<script src="js/js-dataTables.buttons.min.js"></script>
+<script src="js/3.5.0-jszip.min.js" integrity="sha512-y3o0Z5TJF1UsKjs/jS2CDkeHN538bWsftxO9nctODL5W40nyXIbs0Pgyu7//icrQY9m6475gLaVr39i/uh/nLA==" crossorigin="anonymous"></script>
+<script src="js/js-buttons.colVis.min.js"></script>
+<script src="js/js-buttons.flash.min.js"></script>
+<script src="js/js-buttons.html5.min.js"></script>
+<script src="js/js-buttons.print.min.js"></script>
+<script src="js/buttons-angular-datatables.buttons.min.js"></script>
+<script src="js/1.8.0-angular-resource.js"></script>
+<script src="js/4.1.4-angular-busy.js" integrity="sha512-2PrHWUeavJCJBlI9kigBFmivpngZYIa8kvM4rI7pDVNWqKdwanTk7keJgpO8OxaxOcyitwKvn7rv3NbM20QpXg==" crossorigin="anonymous"></script>
+
+
+<script src="js/fastclick-fastclick.js"></script>
+<!-- AdminLTE App -->
+<script src="js/js-app.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="js/js-demo.js"></script>
+<script src="js/js-global.js"></script>
+<!-- Grunt Livereload -->
+<!-- <script src="//localhost:35729/livereload.js"></script> -->
+
+
+</div></body></html>
